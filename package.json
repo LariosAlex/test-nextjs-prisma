@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "nodemon src/app.js",
     "build": "yarn migrate:deploy && next build",
     "start": "next start --port ${PORT-3000}",
     "migrate:dev": "prisma migrate dev",
@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@prisma/client": "4.9.0",
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -23,5 +25,11 @@
     "@types/react": "^18.0.27",
     "prisma": "4.9.0",
     "typescript": "^4.9.5"
-  }
+  },
+  "description": "---\r title: NextJS Prisma\r description: A NextJS app using Prisma with a PostgreSQL database\r tags:\r   - next\r   - prisma\r   - postgresql\r   - typescript\r ---",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
